@@ -8,12 +8,13 @@ class Fibonacci
 public:
     Fibonacci()
     {
-        n = 5;
+        n = 0;
     }
 
-    Fibonacci(int x)
+    void input()
     {
-        n = x;
+        cout << "Enter number of terms: ";
+        cin >> n;
     }
 
     void generate()
@@ -25,6 +26,7 @@ public:
         for (int i = 0; i < n; i++)
         {
             cout << a << " ";
+
             c = a + b;
             a = b;
             b = c;
@@ -34,16 +36,10 @@ public:
 
 int main()
 {
-    int n;
+    Fibonacci f;
 
-    cout << "Enter number of terms: ";
-    cin >> n;
-
-    Fibonacci f1;
-    Fibonacci f2(n);
-
-    cout << "\nUsing parameterized constructor:\n";
-    f2.generate();
+    f.input();
+    f.generate();
 
     return 0;
 }
