@@ -6,13 +6,11 @@ class Fibonacci
     int n;
 
 public:
-    // Default constructor
     Fibonacci()
     {
         n = 5;
     }
 
-    // Parameterized constructor
     Fibonacci(int x)
     {
         n = x;
@@ -41,8 +39,8 @@ int main()
     cout << "Enter number of terms: ";
     cin >> n;
 
-    Fibonacci f1;       // Default constructor
-    Fibonacci f2(n);    // Parameterized constructor
+    Fibonacci f1;
+    Fibonacci f2(n);
 
     cout << "\nUsing parameterized constructor:\n";
     f2.generate();
